@@ -49,8 +49,9 @@ class _CameraPreviewState extends State<CameraPreview> {
       // 初始化相机控制器
       _cameraController = camera.CameraController(
         _cameras[0],
-        camera.ResolutionPreset.medium,
+        camera.ResolutionPreset.low,
         enableAudio: false,
+        imageFormatGroup: camera.ImageFormatGroup.jpeg,
       );
 
       await _cameraController!.initialize();
